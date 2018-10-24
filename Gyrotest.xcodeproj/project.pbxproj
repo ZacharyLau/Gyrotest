@@ -14,6 +14,8 @@
 		91234D4A20A8BE5D00348DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91234D4820A8BE5D00348DA4 /* LaunchScreen.storyboard */; };
 		91234D5520A8BE5D00348DA4 /* GyrotestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91234D5420A8BE5D00348DA4 /* GyrotestTests.swift */; };
 		91234D6020A8BE5D00348DA4 /* GyrotestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91234D5F20A8BE5D00348DA4 /* GyrotestUITests.swift */; };
+		91234D6E20A94EDE00348DA4 /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91234D6D20A94EDE00348DA4 /* functions.swift */; };
+		91ED982820FA48660021A870 /* gfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ED982720FA48660021A870 /* gfunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		91234D5B20A8BE5D00348DA4 /* GyrotestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GyrotestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91234D5F20A8BE5D00348DA4 /* GyrotestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyrotestUITests.swift; sourceTree = "<group>"; };
 		91234D6120A8BE5D00348DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91234D6D20A94EDE00348DA4 /* functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		91ED982720FA48660021A870 /* gfunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gfunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				91234D4620A8BE5D00348DA4 /* Assets.xcassets */,
 				91234D4820A8BE5D00348DA4 /* LaunchScreen.storyboard */,
 				91234D4B20A8BE5D00348DA4 /* Info.plist */,
+				91234D6D20A94EDE00348DA4 /* functions.swift */,
+				91ED982720FA48660021A870 /* gfunction.swift */,
 			);
 			path = Gyrotest;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					91234D3B20A8BE5D00348DA4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P5AHV65CFS;
 						ProvisioningStyle = Automatic;
 					};
 					91234D4F20A8BE5D00348DA4 = {
@@ -261,6 +268,8 @@
 			files = (
 				91234D4220A8BE5D00348DA4 /* ViewController.swift in Sources */,
 				91234D4020A8BE5D00348DA4 /* AppDelegate.swift in Sources */,
+				91234D6E20A94EDE00348DA4 /* functions.swift in Sources */,
+				91ED982820FA48660021A870 /* gfunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +345,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -355,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,6 +396,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -399,8 +410,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,11 +424,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5AHV65CFS;
 				INFOPLIST_FILE = Gyrotest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ss.Gyrotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -424,11 +440,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5AHV65CFS;
 				INFOPLIST_FILE = Gyrotest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ss.Gyrotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -496,7 +516,7 @@
 				91234D6320A8BE5D00348DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		91234D6420A8BE5D00348DA4 /* Build configuration list for PBXNativeTarget "Gyrotest" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +525,7 @@
 				91234D6620A8BE5D00348DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		91234D6720A8BE5D00348DA4 /* Build configuration list for PBXNativeTarget "GyrotestTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				91234D6920A8BE5D00348DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		91234D6A20A8BE5D00348DA4 /* Build configuration list for PBXNativeTarget "GyrotestUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				91234D6C20A8BE5D00348DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
